@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
+local package_path_str = "/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?.lua;/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?/init.lua;/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?.lua;/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/theobourgeois/.cache/nvim/packer_hererocks/2.1.1727870382/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -99,6 +104,14 @@ _G.packer_plugins = {
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\nJ\0\0\3\1\2\0\5-\0\0\0009\0\0\0005\2\1\0B\0\2\1K\0\1\0\0À\1\0\3\nasync\1\17lsp_fallback\2\15timeout_ms\3è\a\vformat¼\3\1\0\6\0\24\0\0296\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\14\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\0045\5\n\0=\5\v\0045\5\f\0=\5\r\4=\4\15\0035\4\16\0=\4\17\3B\1\2\0016\1\18\0009\1\19\0019\1\20\1'\3\21\0'\4\22\0003\5\23\0B\1\4\0012\0\0€K\0\1\0\0\14<leader>f\6n\bset\vkeymap\bvim\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3è\a\22formmatters_by_ft\1\0\2\22formmatters_by_ft\0\19format_on_save\0\tjson\1\2\0\0\14prettierd\20typescriptreact\1\2\0\0\14prettierd\15typescript\1\2\0\0\14prettierd\15javascript\1\2\0\0\14prettierd\blua\1\0\5\tjson\0\20typescriptreact\0\15typescript\0\15javascript\0\blua\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/opt/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -108,6 +121,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
   },
   harpoon = {
     loaded = true,
@@ -155,6 +173,11 @@ _G.packer_plugins = {
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -169,11 +192,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -193,6 +211,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au BufNewFile * ++once lua require("packer.load")({'conform.nvim'}, { event = "BufNewFile *" }, _G.packer_plugins)]]
+vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'conform.nvim'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

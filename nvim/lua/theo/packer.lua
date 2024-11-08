@@ -8,16 +8,19 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'github/copilot.vim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+
   use {'nvim-telescope/telescope.nvim', tag = '0.1.6',
   -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 	}
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
+  use('morhetz/gruvbox')
   use('tpope/vim-fugitive')
+  use("olimorris/onedarkpro.nvim")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -33,15 +36,37 @@ return require('packer').startup(function(use)
 		  {'saadparwaiz1/cmp_luasnip'},
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'}
-
-
 	  }
   }
-
   use {
 	  'nvim-lualine/lualine.nvim',
-	  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-
+	  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   }
-
+  use {
+    'stevearc/conform.nvim',
+    event = { "BufReadPre", "BufNewFile" },
+    config = function() 
+      local conform = require('conform')
+      conform.setup({
+        formmatters_by_ft = {
+          lua = { "stylua" },
+          javascript = { "prettierd" },
+          typescript = { "prettierd" },
+          typescriptreact = { "prettierd" },
+          json = { "prettierd" },
+        },
+        format_on_save = {
+          timeout_ms = 1000,
+          lsp_fallback = true,
+        },
+      })
+      vim.keymap.set("n", "<leader>f", function() 
+        conform.format({
+          lsp_fallback = true,
+          async = false,
+          timeout_ms = 1000,
+        })
+      end)
+    end 
+  }
 end)
