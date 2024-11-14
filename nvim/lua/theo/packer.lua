@@ -21,6 +21,12 @@ return require('packer').startup(function(use)
   use('morhetz/gruvbox')
   use('tpope/vim-fugitive')
   use("olimorris/onedarkpro.nvim")
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

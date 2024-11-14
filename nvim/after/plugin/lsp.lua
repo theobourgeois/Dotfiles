@@ -22,7 +22,7 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'ts_ls', 'rust_analyzer', 'tailwindcss', 'eslint', 'biome', 'cssls'},
+  ensure_installed = {'ts_ls', 'rust_analyzer', 'tailwindcss', 'eslint', 'biome', 'cssls', 'clangd', 'pyright', 'gopls', 'html'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({
