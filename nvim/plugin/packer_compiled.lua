@@ -111,12 +111,17 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["conform.nvim"] = {
-    config = { "\27LJ\2\nJ\0\0\3\1\2\0\5-\0\0\0009\0\0\0005\2\1\0B\0\2\1K\0\1\0\0À\1\0\3\15timeout_ms\3è\a\nasync\1\17lsp_fallback\2\vformat¼\3\1\0\6\0\24\0\0296\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\14\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\0045\5\n\0=\5\v\0045\5\f\0=\5\r\4=\4\15\0035\4\16\0=\4\17\3B\1\2\0016\1\18\0009\1\19\0019\1\20\1'\3\21\0'\4\22\0003\5\23\0B\1\4\0012\0\0€K\0\1\0\0\14<leader>f\6n\bset\vkeymap\bvim\19format_on_save\1\0\2\15timeout_ms\3è\a\17lsp_fallback\2\22formmatters_by_ft\1\0\2\19format_on_save\0\22formmatters_by_ft\0\tjson\1\2\0\0\14prettierd\20typescriptreact\1\2\0\0\14prettierd\15typescript\1\2\0\0\14prettierd\15javascript\1\2\0\0\14prettierd\blua\1\0\5\20typescriptreact\0\15javascript\0\tjson\0\blua\0\15typescript\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
+    config = { "\27LJ\2\nJ\0\0\3\1\2\0\5-\0\0\0009\0\0\0005\2\1\0B\0\2\1K\0\1\0\0À\1\0\3\nasync\1\17lsp_fallback\2\15timeout_ms\3è\a\vformat¼\3\1\0\6\0\24\0\0296\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\14\0005\4\4\0005\5\3\0=\5\5\0045\5\6\0=\5\a\0045\5\b\0=\5\t\0045\5\n\0=\5\v\0045\5\f\0=\5\r\4=\4\15\0035\4\16\0=\4\17\3B\1\2\0016\1\18\0009\1\19\0019\1\20\1'\3\21\0'\4\22\0003\5\23\0B\1\4\0012\0\0€K\0\1\0\0\14<leader>f\6n\bset\vkeymap\bvim\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3è\a\22formmatters_by_ft\1\0\2\22formmatters_by_ft\0\19format_on_save\0\tjson\1\2\0\0\14prettierd\20typescriptreact\1\2\0\0\14prettierd\15typescript\1\2\0\0\14prettierd\15javascript\1\2\0\0\14prettierd\blua\1\0\5\15javascript\0\tjson\0\blua\0\20typescriptreact\0\15typescript\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
     path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/opt/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
+  },
+  conjure = {
+    loaded = true,
+    path = "/Users/theobourgeois/.local/share/nvim/site/pack/packer/start/conjure",
+    url = "https://github.com/Olical/conjure"
   },
   ["copilot.vim"] = {
     loaded = true,

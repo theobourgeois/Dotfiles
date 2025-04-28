@@ -17,12 +17,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-
+ 
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'ts_ls', 'rust_analyzer', 'tailwindcss', 'eslint', 'biome', 'cssls', 'clangd', 'pyright', 'gopls', 'html'},
+  ensure_installed = {'rust_analyzer', 'clojure_lsp', 'tailwindcss', 'eslint', 'biome', 'cssls', 'clangd', 'pyright', 'gopls', 'html', 'ast_grep', 'svelte'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({
@@ -83,15 +83,15 @@ cmp.setup({
       end
     end, {'i', 's'}),
 
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif require('luasnip').jumpable(-1) then
-        require('luasnip').jump(-1)
-      else
-        fallback()
-      end
-    end, {'i', 's'}),
+    -- ['<S-Tab>'] = cmp.mapping(function(fallback)
+      -- if cmp.visible() then
+        -- cmp.select_prev_item()
+      -- elseif require('luasnip').jumpable(-1) then
+        -- require('luasnip').jump(-1)
+      -- else
+        -- fallback()
+      -- end
+    -- end, {'i', 's'}),
   }),
   snippet = {
     expand = function(args)

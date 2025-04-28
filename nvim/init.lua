@@ -24,3 +24,8 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "NONE" })
 
+vim.api.nvim_set_keymap('n', '<leader>ee', '<cmd>ConjureEvalCurrentForm<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>er', '<cmd>ConjureEvalRootForm<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>el', '<cmd>ConjureEvalLastForm<CR>', { noremap = true, silent = true })
+
+
